@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="This week's stars from the MCC Brand Ambassadors community.">
+<title>MCC Stars of the Week</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hind:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;600;700;800&family=Noto+Sans+Malayalam:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: awards-night stage — hero, two "never missed" reel phones as the centrepiece, then the stars wall, then the next-trend countdown. Single dark look by choice. */
+:root{
+  --stage:#1E0619; --panel:#2E0B28; --panel-2:#3D1036; --line:#55204D;
+  --ink:#FFF6FB; --muted:#D9B9D2; --pink:#F2B8E4; --magenta:#C2288A; --gold:#F3C14B; --mint:#9FE3B8;
+  --display:"Bricolage Grotesque", "Hind", "Noto Sans Tamil", "Noto Sans Malayalam", system-ui, sans-serif;
+  --body:"Hind", "Noto Sans Tamil", "Noto Sans Malayalam", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--stage);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;
+  padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px));padding-block:0;overflow-x:hidden}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:64px;padding-block:40px 56px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
+.eyebrow{font-family:var(--display);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--pink)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+h1{font-size:clamp(44px,8vw,88px);line-height:.95;font-weight:800;letter-spacing:-.02em}
+h1 .glow{background:linear-gradient(100deg,var(--gold),var(--pink) 55%,var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(28px,4.4vw,42px);font-weight:800;line-height:1.05}
+.lede{font-size:20px;color:var(--muted);max-width:56ch;margin:0}
+
+/* hero */
+.hero{position:relative;display:flex;flex-direction:column;gap:18px;padding-top:20px}
+.hero canvas{position:absolute;inset:-40px -20px auto;width:calc(100% + 40px);height:320px;pointer-events:none;z-index:0}
+.hero > *:not(canvas){position:relative;z-index:1}
+.hi{font-size:20px;font-weight:600;color:var(--gold)}
+
+/* never missed */
+.never{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.ncard{background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:22px;display:grid;grid-template-columns:200px 1fr;gap:22px;align-items:center}
+.phone{aspect-ratio:9/16;max-width:100%;border-radius:26px;border:6px solid #0F030D;background:
+  radial-gradient(120% 80% at 30% 20%, #C2288A 0%, #5A1150 45%, #1E0619 100%);position:relative;overflow:hidden;text-decoration:none;display:block;transition:transform .25s ease}
+.phone:hover{transform:translateY(-4px) rotate(-1deg)}
+.phone .play{position:absolute;inset:0;margin:auto;width:66px;height:66px;border-radius:999px;background:rgba(255,246,251,.95);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 0 rgba(242,184,228,.6);animation:pulse 2.2s infinite}
+.phone .play svg{margin-left:4px}
+.phone .tag{position:absolute;left:12px;right:12px;bottom:12px;font-size:13px;font-weight:600;color:#fff;line-height:1.3}
+.phone .top{position:absolute;left:12px;top:12px;font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--pink)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(242,184,228,.55)}70%{box-shadow:0 0 0 18px rgba(242,184,228,0)}100%{box-shadow:0 0 0 0 rgba(242,184,228,0)}}
+.ncard .who{display:flex;flex-direction:column;gap:10px;min-width:0}
+.ncard .handle{font-family:var(--display);font-size:26px;font-weight:800;overflow-wrap:anywhere}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;border-radius:999px;padding:5px 12px;width:fit-content}
+.b-gold{background:var(--gold);color:#2A0826}
+.b-mint{background:var(--mint);color:#16301F}
+.b-soft{background:var(--panel-2);color:var(--pink)}
+.ncard p{margin:0;color:var(--muted)}
+.watch{font-weight:700;color:var(--pink);text-decoration:none}
+.watch:hover{text-decoration:underline}
+
+/* spotlights: the headline moment */
+.spots{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.spot{position:relative;border-radius:32px;padding:28px;display:grid;grid-template-columns:1fr 170px;gap:22px;align-items:center;background:linear-gradient(150deg,#7A1468,#C2288A 70%,#E0499F);overflow:hidden;box-shadow:0 18px 50px rgba(194,40,138,.35)}
+.spot.debut{background:linear-gradient(150deg,#1F4D3A,#2F7A5A 70%,#4FB389);box-shadow:0 18px 50px rgba(79,179,137,.28)}
+.spot::after{content:"";position:absolute;width:260px;height:260px;border-radius:999px;right:-90px;top:-110px;background:rgba(255,255,255,.12)}
+.spot .txt{display:flex;flex-direction:column;gap:12px;min-width:0;position:relative;z-index:1}
+.spot .handle{font-family:var(--display);font-size:clamp(28px,3.6vw,40px);font-weight:800;line-height:1.05;overflow-wrap:anywhere}
+.spot p{margin:0;color:#FFF0F8;font-size:18px}
+.spot .phone{position:relative;z-index:1;border-color:rgba(15,3,13,.6)}
+.spot .crown{font-size:44px;line-height:1}
+.spot .cta{display:inline-flex;align-items:center;gap:8px;background:#FFF6FB;color:#2A0826;font-weight:700;border-radius:999px;padding:10px 18px;text-decoration:none;width:fit-content}
+.spot.debut .cta{color:#16301F}
+
+/* stars wall */
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.star{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;min-width:0;transition:transform .2s ease,border-color .2s ease}
+.star:hover{transform:translateY(-3px);border-color:var(--pink)}
+.star .handle{font-family:var(--display);font-size:20px;font-weight:700;overflow-wrap:anywhere}
+.star .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.star.me{border-color:var(--gold);box-shadow:0 0 0 3px rgba(243,193,75,.35)}
+.also{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:var(--panel-2);border-radius:999px;padding:7px 14px;font-weight:600;font-size:15px}
+.chip.me{background:var(--gold);color:#2A0826}
+
+/* find me */
+.find{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:12px}
+.find label{font-weight:600}
+.find input{font:inherit;font-size:18px;background:var(--stage);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%;max-width:420px}
+.find .msg{min-height:1.6em;color:var(--pink);font-weight:600}
+
+/* next trend */
+.next{background:var(--ink);color:#2A0826;border-radius:28px;padding:28px;display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center}
+.next h2{color:#2A0826}
+.next p{margin:8px 0 0;color:#5A2A52}
+.count{display:flex;gap:10px;flex-wrap:wrap}
+.unit{background:#2A0826;color:var(--ink);border-radius:16px;padding:12px 14px;min-width:78px;text-align:center}
+.unit b{display:block;font-family:var(--display);font-size:34px;font-variant-numeric:tabular-nums;line-height:1}
+.unit span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--pink)}
+.tip{background:var(--panel-2);border-radius:20px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start}
+.tip b{color:var(--gold)}
+.hindi{font-weight:700;color:var(--magenta)}
+.sec{display:flex;flex-direction:column;gap:20px}
+footer{color:var(--muted);font-size:14px;text-align:center}
+
+@media (max-width:760px){
+  .never,.spots,.next{grid-template-columns:1fr}
+  .ncard{grid-template-columns:140px 1fr}
+  .spot{grid-template-columns:1fr 140px}
+}
+@media (max-width:420px){ .ncard,.spot{grid-template-columns:1fr} .ncard .phone,.spot .phone{max-width:200px} }
+@media (prefers-reduced-motion:reduce){ *{animation:none!important;transition:none!important} }
+
+/* language switcher */
+.langbar{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:-40px}
+.langlabel{font-size:14px;color:var(--muted);font-weight:600}
+.langs{display:flex;flex-wrap:wrap;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px}
+.lb{font:inherit;font-size:15px;font-weight:600;color:var(--muted);background:transparent;border:0;border-radius:999px;padding:6px 14px;cursor:pointer}
+.lb:hover{color:var(--ink)}
+.lb[aria-pressed="true"]{background:var(--gold);color:#2A0826}
+.unit{min-width:84px}
+.unit span{letter-spacing:.04em}
+@media (max-width:520px){.langbar{justify-content:flex-start;margin-bottom:-24px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="langbar" aria-label="Choose language">
+    <span class="langlabel" data-i="lang">Language</span>
+    <div class="langs" role="group">
+      <button type="button" class="lb" data-lang="en">English</button>
+      <button type="button" class="lb" data-lang="hi">हिंदी</button>
+      <button type="button" class="lb" data-lang="ta">தமிழ்</button>
+      <button type="button" class="lb" data-lang="ml">മലയാളം</button>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <canvas id="sparkle" aria-hidden="true"></canvas>
+    <span class="eyebrow" data-i="eyebrow"></span>
+    <h1 data-i="h1" data-html="1"></h1>
+    <p class="lede" data-i="lede"></p>
+    <span class="hi" data-i="hi"></span>
+  </header>
+
+  <section class="sec" aria-labelledby="spot-h">
+    <span class="eyebrow" data-i="spot_eyebrow"></span>
+    <h2 id="spot-h" data-i="spot_h"></h2>
+    <div class="spots">
+      <article class="spot">
+        <div class="txt">
+          <span class="crown" aria-hidden="true">🏆</span>
+          <span class="badge b-gold" data-i="viral_badge"></span>
+          <span class="handle">@parul_instagirl</span>
+          <p data-i="viral_p"></p>
+          <a class="cta" href="https://www.instagram.com/reel/De9ZzAQBfFe/" target="_blank" rel="noopener" data-i="watch_reel"></a>
+        </div>
+        <a class="phone" href="https://www.instagram.com/reel/De9ZzAQBfFe/" target="_blank" rel="noopener" aria-label="parul_instagirl reel on Instagram">
+          <span class="top" data-i="top_viral"></span>
+          <span class="play"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z" fill="#C2288A"/></svg></span>
+          <span class="tag" data-i="tap"></span>
+        </a>
+      </article>
+      <article class="spot debut">
+        <div class="txt">
+          <span class="crown" aria-hidden="true">✨</span>
+          <span class="badge b-mint" data-i="debut_badge"></span>
+          <span class="handle">@Snehal_mule5513</span>
+          <p data-i="debut_p"></p>
+          <a class="cta" href="https://www.instagram.com/reel/De8h3oUTR7K/" target="_blank" rel="noopener" data-i="watch_reel"></a>
+        </div>
+        <a class="phone" href="https://www.instagram.com/reel/De8h3oUTR7K/" target="_blank" rel="noopener" aria-label="Snehal_mule5513 reel on Instagram">
+          <span class="top" data-i="top_debut"></span>
+          <span class="play"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z" fill="#2F7A5A"/></svg></span>
+          <span class="tag" data-i="tap"></span>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="never-h">
+    <span class="eyebrow" data-i="never_eyebrow"></span>
+    <h2 id="never-h" data-i="never_h"></h2>
+    <p class="lede" data-i="never_lede"></p>
+    <div class="never">
+      <article class="ncard">
+        <a class="phone" href="https://www.instagram.com/reel/De40KMQo03y/" target="_blank" rel="noopener" aria-label="chunmun95273 reel on Instagram">
+          <span class="top" data-i="this_week_reel"></span>
+          <span class="play"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z" fill="#C2288A"/></svg></span>
+          <span class="tag" data-i="tap_ig"></span>
+        </a>
+        <div class="who">
+          <span class="badge b-gold" data-i="never_badge"></span>
+          <span class="handle">@chunmun95273</span>
+          <p data-i="chunmun_p"></p>
+          <a class="watch" href="https://www.instagram.com/reel/De40KMQo03y/" target="_blank" rel="noopener" data-i="watch"></a>
+        </div>
+      </article>
+      <article class="ncard">
+        <a class="phone" href="https://www.instagram.com/reel/De9e9mMt7UQ/" target="_blank" rel="noopener" aria-label="Bhkti359 reel on Instagram">
+          <span class="top" data-i="this_week_reel"></span>
+          <span class="play"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z" fill="#C2288A"/></svg></span>
+          <span class="tag" data-i="tap_ig"></span>
+        </a>
+        <div class="who">
+          <span class="badge b-gold" data-i="never_badge"></span>
+          <span class="handle">@Bhkti359</span>
+          <p data-i="geetu_p"></p>
+          <a class="watch" href="https://www.instagram.com/reel/De9e9mMt7UQ/" target="_blank" rel="noopener" data-i="watch"></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="wall-h">
+    <span class="eyebrow" data-i="wall_eyebrow"></span>
+    <h2 id="wall-h" data-i="wall_h"></h2>
+    <div class="wall" id="wall"></div>
+    <h3 style="font-size:22px;margin-top:8px" data-i="also_h"></h3>
+    <div class="also" id="also"></div>
+  </section>
+
+  <section class="find" aria-labelledby="find-h">
+    <h2 id="find-h" style="font-size:26px" data-i="find_h"></h2>
+    <label for="me" data-i="find_label"></label>
+    <input id="me" type="text" placeholder="@yourhandle" autocomplete="off">
+    <div class="msg" id="msg" aria-live="polite"></div>
+  </section>
+
+  <div class="tip">
+    <span style="font-size:28px" aria-hidden="true">💡</span>
+    <div><b data-i="tip_b"></b> <span data-i="tip"></span></div>
+  </div>
+
+  <section class="next" aria-labelledby="next-h">
+    <div>
+      <span class="eyebrow" style="color:#C2288A" data-i="next_eyebrow"></span>
+      <h2 id="next-h" data-i="next_h"></h2>
+      <p class="hindi" data-i="next_line"></p>
+      <p data-i="next_p"></p>
+    </div>
+    <div class="count" id="count">
+      <div class="unit"><b id="d">0</b><span data-i="u_d"></span></div>
+      <div class="unit"><b id="h">0</b><span data-i="u_h"></span></div>
+      <div class="unit"><b id="m">0</b><span data-i="u_m"></span></div>
+      <div class="unit"><b id="s">0</b><span data-i="u_s"></span></div>
+    </div>
+  </section>
+
+  <footer data-i="footer"></footer>
+</div>
+
+<script>
+const T={
+en:{lang:"Language",eyebrow:"MCC Brand Ambassadors · Week of 26 Oct",h1:"This week's <span class=\"glow\">stars</span>",lede:"You showed up, you created, you inspired the community. Here's everyone who made this week special.",hi:"Well done, ambassadors! 🎉",spot_eyebrow:"⭐ Spotlight of the week",spot_h:"The reels everyone's talking about",viral_badge:"Viral of the week",viral_p:"This reel took over everyone's feed. The whole community saw it!",watch_reel:"▶ Watch the reel",tap:"Tap to watch",top_viral:"VIRAL",top_debut:"DEBUT",debut_badge:"Best debut",debut_p:"Her very first reel with us, and she's already one of this week's stars. Welcome to the family!",never_eyebrow:"Hall of Fame",never_h:"They've never missed a week",never_lede:"Every single trend since July. Watch their reels from this week.",never_badge:"💪 Never missed a week",this_week_reel:"THIS WEEK'S REEL",tap_ig:"Tap to watch on Instagram",chunmun_p:"Consistent from day one. Proof that showing up every week builds a real audience.",geetu_p:"Every trend, every week. An inspiration for every new ambassador.",watch:"Watch reel ↗",wall_eyebrow:"Stars wall",wall_h:"This week's top creators",also_h:"Also shining this week 👏",b_star:"⭐ Star",b_first:"✨ First week",b_every:"💪 Every week",b_viral:"🏆 Viral",watch_short:"Watch ↗",find_h:"Are you on the wall?",find_label:"Type your Instagram handle",msg_star:"🎉 Yes! @{h}, you're on the stars wall this week. Share it with your followers!",msg_also:"👏 You're shining this week, @{h}! One more great reel and you're on the wall.",msg_none:"Not this week, but the next trend is your chance. Post your reel and submit it in the community!",tip_b:"Tip for next week:",tip:"grab attention in the first 3 seconds and say the price on screen. Small changes, big reach.",next_eyebrow:"Next trend",next_h:"Your reel could be on this wall next week",next_line:"Get ready! 🎯",next_p:"The new trend drops in the community on Monday.",u_d:"Days",u_h:"Hours",u_m:"Mins",u_s:"Secs",footer:"Made with love for the MCC Brand Ambassadors community"},
+hi:{lang:"भाषा",eyebrow:"MCC ब्रांड एम्बेसडर्स · 26 अक्टूबर का हफ़्ता",h1:"इस हफ़्ते के <span class=\"glow\">सितारे</span>",lede:"आपने हिस्सा लिया, क्रिएट किया और कम्युनिटी को प्रेरित किया। ये हैं वो सब जिन्होंने इस हफ़्ते को खास बनाया।",hi:"शाबाश, एम्बेसडर्स! 🎉",spot_eyebrow:"⭐ इस हफ़्ते का स्पॉटलाइट",spot_h:"वो रील्स जिनकी सब बात कर रहे हैं",viral_badge:"हफ़्ते की वायरल रील",viral_p:"इस रील ने सबकी फ़ीड पर धूम मचा दी। पूरी कम्युनिटी ने इसे देखा!",watch_reel:"▶ रील देखें",tap:"देखने के लिए टैप करें",top_viral:"वायरल",top_debut:"डेब्यू",debut_badge:"बेस्ट डेब्यू",debut_p:"हमारे साथ उनकी पहली ही रील, और वो इस हफ़्ते के सितारों में हैं। परिवार में स्वागत है!",never_eyebrow:"हॉल ऑफ़ फ़ेम",never_h:"इन्होंने एक भी हफ़्ता नहीं छोड़ा",never_lede:"जुलाई से हर ट्रेंड में शामिल। देखिए इनकी इस हफ़्ते की रील्स।",never_badge:"💪 एक भी हफ़्ता नहीं छोड़ा",this_week_reel:"इस हफ़्ते की रील",tap_ig:"Instagram पर देखने के लिए टैप करें",chunmun_p:"पहले दिन से लगातार। हर हफ़्ते आना ही असली ऑडियंस बनाता है।",geetu_p:"हर ट्रेंड, हर हफ़्ता। हर नए एम्बेसडर के लिए एक प्रेरणा।",watch:"रील देखें ↗",wall_eyebrow:"सितारों की दीवार",wall_h:"इस हफ़्ते के टॉप क्रिएटर्स",also_h:"इस हफ़्ते ये भी चमके 👏",b_star:"⭐ सितारा",b_first:"✨ पहला हफ़्ता",b_every:"💪 हर हफ़्ते",b_viral:"🏆 वायरल",watch_short:"देखें ↗",find_h:"क्या आप दीवार पर हैं?",find_label:"अपना Instagram हैंडल लिखें",msg_star:"🎉 हाँ! @{h}, आप इस हफ़्ते सितारों की दीवार पर हैं। अपने फ़ॉलोअर्स के साथ शेयर करें!",msg_also:"👏 @{h}, आप इस हफ़्ते चमक रहे हैं! एक और शानदार रील और आप दीवार पर होंगे।",msg_none:"इस हफ़्ते नहीं, पर अगला ट्रेंड आपका मौका है। रील पोस्ट करें और कम्युनिटी में सबमिट करें!",tip_b:"अगले हफ़्ते के लिए टिप:",tip:"पहले 3 सेकंड में ध्यान खींचें और स्क्रीन पर कीमत बताएं। छोटे बदलाव, बड़ी पहुँच।",next_eyebrow:"अगला ट्रेंड",next_h:"अगले हफ़्ते आपकी रील इस दीवार पर हो सकती है",next_line:"तैयार रहिए! 🎯",next_p:"नया ट्रेंड सोमवार को कम्युनिटी में आएगा।",u_d:"दिन",u_h:"घंटे",u_m:"मिनट",u_s:"सेकंड",footer:"MCC ब्रांड एम्बेसडर्स कम्युनिटी के लिए प्यार से बनाया गया"},
+ta:{lang:"மொழி",eyebrow:"MCC பிராண்ட் அம்பாசிடர்கள் · அக்டோபர் 26 வாரம்",h1:"இந்த வாரத்தின் <span class=\"glow\">நட்சத்திரங்கள்</span>",lede:"நீங்கள் பங்கேற்றீர்கள், உருவாக்கினீர்கள், சமூகத்தை ஊக்குவித்தீர்கள். இந்த வாரத்தை சிறப்பாக்கிய அனைவரும் இங்கே.",hi:"சபாஷ், அம்பாசிடர்களே! 🎉",spot_eyebrow:"⭐ இந்த வார ஸ்பாட்லைட்",spot_h:"எல்லோரும் பேசும் ரீல்கள்",viral_badge:"இந்த வாரத்தின் வைரல்",viral_p:"இந்த ரீல் எல்லோருடைய ஃபீடிலும் கலக்கியது. முழு சமூகமும் இதைப் பார்த்தது!",watch_reel:"▶ ரீலைப் பாருங்கள்",tap:"பார்க்க தட்டவும்",top_viral:"வைரல்",top_debut:"அறிமுகம்",debut_badge:"சிறந்த அறிமுகம்",debut_p:"எங்களுடன் அவரது முதல் ரீலே, இப்போது இந்த வார நட்சத்திரங்களில் ஒருவர். குடும்பத்திற்கு வரவேற்கிறோம்!",never_eyebrow:"புகழ் மண்டபம்",never_h:"ஒரு வாரம் கூட தவறவிடாதவர்கள்",never_lede:"ஜூலை முதல் ஒவ்வொரு ட்ரெண்டிலும். இந்த வார ரீல்களைப் பாருங்கள்.",never_badge:"💪 ஒரு வாரமும் தவறவில்லை",this_week_reel:"இந்த வார ரீல்",tap_ig:"Instagram-இல் பார்க்க தட்டவும்",chunmun_p:"முதல் நாளிலிருந்தே தொடர்ச்சியாக. ஒவ்வொரு வாரமும் வருவதே உண்மையான பார்வையாளர்களை உருவாக்கும்.",geetu_p:"ஒவ்வொரு ட்ரெண்ட், ஒவ்வொரு வாரம். ஒவ்வொரு புதிய அம்பாசிடருக்கும் ஊக்கம்.",watch:"ரீலைப் பாருங்கள் ↗",wall_eyebrow:"நட்சத்திரச் சுவர்",wall_h:"இந்த வாரத்தின் சிறந்த கிரியேட்டர்கள்",also_h:"இந்த வாரம் இவர்களும் ஜொலித்தார்கள் 👏",b_star:"⭐ நட்சத்திரம்",b_first:"✨ முதல் வாரம்",b_every:"💪 ஒவ்வொரு வாரமும்",b_viral:"🏆 வைரல்",watch_short:"பாருங்கள் ↗",find_h:"நீங்கள் சுவரில் இருக்கிறீர்களா?",find_label:"உங்கள் Instagram ஹேண்டிலை டைப் செய்யவும்",msg_star:"🎉 ஆம்! @{h}, இந்த வாரம் நீங்கள் நட்சத்திரச் சுவரில் இருக்கிறீர்கள். உங்கள் ஃபாலோயர்களுடன் பகிருங்கள்!",msg_also:"👏 @{h}, இந்த வாரம் நீங்கள் ஜொலிக்கிறீர்கள்! இன்னும் ஒரு சிறந்த ரீல், நீங்கள் சுவரில் இருப்பீர்கள்.",msg_none:"இந்த வாரம் இல்லை, ஆனால் அடுத்த ட்ரெண்ட் உங்கள் வாய்ப்பு. ரீலை போஸ்ட் செய்து சமூகத்தில் சமர்ப்பியுங்கள்!",tip_b:"அடுத்த வாரத்துக்கான டிப்:",tip:"முதல் 3 விநாடிகளில் கவனத்தை ஈர்த்து, திரையில் விலையைச் சொல்லுங்கள். சிறிய மாற்றங்கள், பெரிய ரீச்.",next_eyebrow:"அடுத்த ட்ரெண்ட்",next_h:"அடுத்த வாரம் உங்கள் ரீல் இந்தச் சுவரில் இருக்கலாம்",next_line:"தயாராகுங்கள்! 🎯",next_p:"புதிய ட்ரெண்ட் திங்கள்கிழமை சமூகத்தில் வரும்.",u_d:"நாட்கள்",u_h:"மணி",u_m:"நிமிடம்",u_s:"விநாடி",footer:"MCC பிராண்ட் அம்பாசிடர்கள் சமூகத்திற்காக அன்புடன் உருவாக்கப்பட்டது"},
+ml:{lang:"ഭാഷ",eyebrow:"MCC ബ്രാൻഡ് അംബാസഡർമാർ · ഒക്ടോബർ 26 ആഴ്ച",h1:"ഈ ആഴ്ചയിലെ <span class=\"glow\">താരങ്ങൾ</span>",lede:"നിങ്ങൾ പങ്കെടുത്തു, സൃഷ്ടിച്ചു, കമ്മ്യൂണിറ്റിക്ക് പ്രചോദനമായി. ഈ ആഴ്ച സ്പെഷ്യലാക്കിയ എല്ലാവരും ഇതാ.",hi:"അഭിനന്ദനങ്ങൾ, അംബാസഡർമാരേ! 🎉",spot_eyebrow:"⭐ ഈ ആഴ്ചയിലെ സ്പോട്ട്‌ലൈറ്റ്",spot_h:"എല്ലാവരും സംസാരിക്കുന്ന റീലുകൾ",viral_badge:"ഈ ആഴ്ചയിലെ വൈറൽ",viral_p:"ഈ റീൽ എല്ലാവരുടെയും ഫീഡിൽ തരംഗമായി. കമ്മ്യൂണിറ്റി മുഴുവൻ ഇത് കണ്ടു!",watch_reel:"▶ റീൽ കാണൂ",tap:"കാണാൻ ടാപ്പ് ചെയ്യൂ",top_viral:"വൈറൽ",top_debut:"അരങ്ങേറ്റം",debut_badge:"മികച്ച അരങ്ങേറ്റം",debut_p:"ഞങ്ങളോടൊപ്പമുള്ള ആദ്യ റീൽ തന്നെ, ഇപ്പോൾ ഈ ആഴ്ചയിലെ താരങ്ങളിൽ ഒരാൾ. കുടുംബത്തിലേക്ക് സ്വാഗതം!",never_eyebrow:"ഹാൾ ഓഫ് ഫെയിം",never_h:"ഒരാഴ്ച പോലും മുടക്കാത്തവർ",never_lede:"ജൂലൈ മുതൽ എല്ലാ ട്രെൻഡിലും. ഈ ആഴ്ചയിലെ അവരുടെ റീലുകൾ കാണൂ.",never_badge:"💪 ഒരാഴ്ചയും മുടക്കിയില്ല",this_week_reel:"ഈ ആഴ്ചയിലെ റീൽ",tap_ig:"Instagram-ൽ കാണാൻ ടാപ്പ് ചെയ്യൂ",chunmun_p:"ആദ്യ ദിവസം മുതൽ സ്ഥിരതയോടെ. എല്ലാ ആഴ്ചയും വരുന്നതാണ് യഥാർത്ഥ പ്രേക്ഷകരെ ഉണ്ടാക്കുന്നത്.",geetu_p:"എല്ലാ ട്രെൻഡും, എല്ലാ ആഴ്ചയും. ഓരോ പുതിയ അംബാസഡർക്കും ഒരു പ്രചോദനം.",watch:"റീൽ കാണൂ ↗",wall_eyebrow:"താരങ്ങളുടെ മതിൽ",wall_h:"ഈ ആഴ്ചയിലെ മികച്ച ക്രിയേറ്റർമാർ",also_h:"ഈ ആഴ്ച ഇവരും തിളങ്ങി 👏",b_star:"⭐ താരം",b_first:"✨ ആദ്യ ആഴ്ച",b_every:"💪 എല്ലാ ആഴ്ചയും",b_viral:"🏆 വൈറൽ",watch_short:"കാണൂ ↗",find_h:"നിങ്ങൾ മതിലിൽ ഉണ്ടോ?",find_label:"നിങ്ങളുടെ Instagram ഹാൻഡിൽ ടൈപ്പ് ചെയ്യൂ",msg_star:"🎉 ഉണ്ട്! @{h}, ഈ ആഴ്ച നിങ്ങൾ താരങ്ങളുടെ മതിലിലുണ്ട്. ഫോളോവേഴ്സുമായി ഷെയർ ചെയ്യൂ!",msg_also:"👏 @{h}, ഈ ആഴ്ച നിങ്ങൾ തിളങ്ങുന്നു! ഒരു മികച്ച റീൽ കൂടി, നിങ്ങൾ മതിലിലെത്തും.",msg_none:"ഈ ആഴ്ചയില്ല, പക്ഷേ അടുത്ത ട്രെൻഡ് നിങ്ങളുടെ അവസരമാണ്. റീൽ പോസ്റ്റ് ചെയ്ത് കമ്മ്യൂണിറ്റിയിൽ സബ്മിറ്റ് ചെയ്യൂ!",tip_b:"അടുത്ത ആഴ്ചയ്ക്കുള്ള ടിപ്പ്:",tip:"ആദ്യ 3 സെക്കൻഡിൽ ശ്രദ്ധ പിടിച്ചുപറ്റൂ, സ്ക്രീനിൽ വില പറയൂ. ചെറിയ മാറ്റങ്ങൾ, വലിയ റീച്ച്.",next_eyebrow:"അടുത്ത ട്രെൻഡ്",next_h:"അടുത്ത ആഴ്ച നിങ്ങളുടെ റീൽ ഈ മതിലിലുണ്ടാകാം",next_line:"തയ്യാറാകൂ! 🎯",next_p:"പുതിയ ട്രെൻഡ് തിങ്കളാഴ്ച കമ്മ്യൂണിറ്റിയിൽ എത്തും.",u_d:"ദിവസം",u_h:"മണിക്കൂർ",u_m:"മിനിറ്റ്",u_s:"സെക്കൻഡ്",footer:"MCC ബ്രാൻഡ് അംബാസഡർ കമ്മ്യൂണിറ്റിക്കായി സ്നേഹത്തോടെ"}
+};
+const stars=[
+  {h:"parul_instagirl",r:"De9ZzAQBfFe",b:["b-gold","b_viral"]},
+  {h:"iam.shruti111",r:"De6UQHHiQvL"},
+  {h:"Snehal_mule5513",r:"De8h3oUTR7K",b:["b-mint","b_first"]},
+  {h:"Bhkti359",r:"De9e9mMt7UQ",b:["b-soft","b_every"]},
+  {h:"glow_withsandy",r:"De6AH9qoAuu"},
+  {h:"abii_themom",r:"De67GV5TZbk"},
+  {h:"mana_fashion_diary",r:"De_XouzyfYF"},
+  {h:"chunmun95273",r:"De40KMQo03y",b:["b-soft","b_every"]},
+  {h:"iqraansari_13",r:"De9i-hnzUdp"},
+  {h:"sonidharmendra47",r:"De89jR7BodK",b:["b-soft","b_every"]},
+  {h:"unboxedavenue",r:"De7DHaYvXrh",b:["b-soft","b_every"]},
+  {h:"Ruby.P.Khanna",r:"De9RNYWJEj8",b:["b-soft","b_every"]},
+  {h:"sabiya_ka_jahaan",r:"De6Tn1ustxw"}
+];
+const also=["Minimal_creates.1","reviewbytrapti","Anshudiaries31","Talkingbrish","Thestylelinkofficial","Online_shop_dhamaka_sale","hari3905priya","Poonam_Saxena","trending_vaishali"];
+const key=s=>s.toLowerCase().replace(/[^a-z0-9]/g,'');
+let L='en';
+try{const saved=localStorage.getItem('mcc-lang'); if(saved&&T[saved]) L=saved;}catch(e){}
+const t=k=>(T[L]&&T[L][k])||T.en[k];
+
+const wall=document.getElementById('wall'), alsoEl=document.getElementById('also');
+function renderWall(){
+  wall.innerHTML='';
+  stars.forEach(s=>{
+    const el=document.createElement('article'); el.className='star'; el.dataset.key=key(s.h);
+    const badge=s.b?`<span class="badge ${s.b[0]}">${t(s.b[1])}</span>`:`<span class="badge b-soft">${t('b_star')}</span>`;
+    el.innerHTML=`<span class="handle">@${s.h}</span><div class="row">${badge}<a class="watch" href="https://www.instagram.com/reel/${s.r}/" target="_blank" rel="noopener">${t('watch_short')}</a></div>`;
+    wall.appendChild(el);
+  });
+  alsoEl.innerHTML='';
+  also.forEach(a=>{const c=document.createElement('span');c.className='chip';c.textContent='@'+a;c.dataset.key=key(a);alsoEl.appendChild(c);});
+}
+function apply(){
+  document.documentElement.lang=L;
+  document.querySelectorAll('[data-i]').forEach(n=>{const v=t(n.dataset.i); if(n.dataset.html) n.innerHTML=v; else n.textContent=v;});
+  document.querySelectorAll('.lb').forEach(b=>b.setAttribute('aria-pressed', b.dataset.lang===L ? 'true':'false'));
+  renderWall(); find();
+}
+document.querySelectorAll('.lb').forEach(b=>b.addEventListener('click',()=>{L=b.dataset.lang; try{localStorage.setItem('mcc-lang',L);}catch(e){} apply();}));
+
+const input=document.getElementById('me'), msg=document.getElementById('msg');
+function find(){
+  const k=key(input.value);
+  document.querySelectorAll('[data-key]').forEach(n=>n.classList.toggle('me',k.length>2 && n.dataset.key.includes(k)));
+  if(k.length<3){msg.textContent='';return;}
+  const hs=stars.find(s=>key(s.h).includes(k)), ha=also.find(a=>key(a).includes(k));
+  msg.textContent= hs ? t('msg_star').replace('{h}',hs.h) : ha ? t('msg_also').replace('{h}',ha) : t('msg_none');
+}
+input.addEventListener('input',find);
+apply();
+
+function nextMonday(){
+  const now=new Date();
+  const ist=new Date(now.getTime()+(now.getTimezoneOffset()+330)*60000);
+  const tg=new Date(ist); tg.setHours(10,0,0,0);
+  let add=(1-ist.getDay()+7)%7; if(add===0&&ist>=tg) add=7;
+  tg.setDate(tg.getDate()+add);
+  return now.getTime()+(tg-ist);
+}
+const target=nextMonday();
+function tick(){
+  const ms=Math.max(0,target-Date.now());
+  const v={d:Math.floor(ms/864e5),h:Math.floor(ms/36e5)%24,m:Math.floor(ms/6e4)%60,s:Math.floor(ms/1e3)%60};
+  for(const id in v) document.getElementById(id).textContent=String(v[id]).padStart(2,'0');
+}
+tick(); setInterval(tick,1000);
+
+(function(){
+  const c=document.getElementById('sparkle'); if(!c||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const x=c.getContext('2d'); let w,h,dots=[];
+  function size(){w=c.width=c.offsetWidth*devicePixelRatio;h=c.height=c.offsetHeight*devicePixelRatio;
+    dots=Array.from({length:60},()=>({x:Math.random()*w,y:Math.random()*h,r:(Math.random()*1.8+.4)*devicePixelRatio,a:Math.random()*6.28,s:Math.random()*.02+.005,col:Math.random()<.5?'243,193,75':'242,184,228'}));}
+  size(); addEventListener('resize',size);
+  (function loop(){x.clearRect(0,0,w,h);dots.forEach(d=>{d.a+=d.s;const o=(Math.sin(d.a)+1)/2*.8;x.fillStyle=`rgba(${d.col},${o})`;x.beginPath();x.arc(d.x,d.y,d.r,0,6.28);x.fill();});requestAnimationFrame(loop);})();
+})();
+</script>
+
+</body>
+</html>
